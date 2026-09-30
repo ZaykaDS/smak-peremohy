@@ -21,3 +21,8 @@ npm run images   # regenerate AVIF/WebP from src/assets/src (needs Python + Pill
 - Demo only: cart, donation modal and contact form send nothing.
 - Photos were cropped from raster screenshots inside the PDF (low resolution). Replace files in `src/assets/src/` with originals (same names) and run `npm run images`.
 - `motion` class on `<html>` is set only when `prefers-reduced-motion` is not `reduce`; otherwise all content is shown statically.
+
+## Data to confirm before production
+- **Phone `+38 095 101 73 66`** (contacts section, footer) — taken from the "Контакти" slide of the PDF; the PDF footer shows a different placeholder (`+38 095 000 00 00`). Needs client confirmation.
+- Email, address, working hours, partner logos and the "Звіти" list are also copied from the PDF and should be verified.
+- Social links, report links and "Детальніше" links are demo placeholders.
