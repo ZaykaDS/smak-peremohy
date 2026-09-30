@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Add "Sitemap: https://<final-domain>/sitemap.xml" at launch.

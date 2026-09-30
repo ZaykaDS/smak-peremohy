@@ -84,11 +84,10 @@ function scrollScenes() {
   const story = document.querySelector('[data-words]');
   if (story) {
     const words = story.textContent.trim().split(/\s+/);
-    story.setAttribute('aria-label', story.textContent.trim());
     story.textContent = '';
     const spans = words.map((w) => {
       const s = document.createElement('span');
-      s.className = 'w'; s.textContent = w; s.setAttribute('aria-hidden', 'true');
+      s.className = 'w'; s.textContent = w;
       story.append(s, ' ');
       return s;
     });

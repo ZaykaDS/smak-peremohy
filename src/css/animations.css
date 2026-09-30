@@ -11,12 +11,11 @@
 .motion .is-in .line > span, .motion .line.is-in > span, .motion [data-lines].is-in .line > span { transform: none; }
 
 /* ---- hero entrance (load) ---- */
-.motion .hero .hero__stage { opacity: 0; transform: scale(1.03); transition: opacity .9s var(--ease), transform 1.2s var(--ease); }
-.motion .hero .hero__bag { opacity: 0; transform: translate3d(0, 24px, 0) scale(.96); transition: opacity .8s var(--ease) .25s, transform .9s var(--ease) .25s; }
+.motion .hero .hero__stage { transform: scale(1.03); transition: transform 1.2s var(--ease); }
+.motion .hero .hero__bag { transform: translate3d(0, 24px, 0) scale(.96); transition: transform .9s var(--ease) .25s; }
 .motion .hero .hero__actions { opacity: 0; transform: translate3d(0, 24px, 0); transition: opacity .7s var(--ease) .75s, transform .7s var(--ease) .75s; }
 .motion .hero .hero__decor { opacity: 0; transition: opacity .8s var(--ease) 1s, translate .9s var(--ease) 1s; translate: 0 30px; }
 .motion .hero .hero__title .line > span { transition-delay: calc(.45s + var(--i, 0) * .14s); }
-.motion.hero-in .hero .hero__stage { opacity: 1; transform: scale(var(--hs, 1)) translate3d(0, var(--hy, 0px), 0); }
 .motion.hero-in .hero .hero__bag, .motion.hero-in .hero .hero__actions { opacity: 1; transform: none; }
 .motion.hero-in .hero .hero__decor { opacity: .9; translate: 0 0; }
 .motion.hero-in .hero .hero__title .line > span { transform: none; }
@@ -30,8 +29,8 @@
 .team__track, .cut { transition: none; }
 
 /* ---- story words ---- */
-.motion .story__text .w { opacity: .16; transform: translate3d(0, .12em, 0); }
-.motion .story__text .w.on { opacity: 1; transform: none; }
+.motion .story__text .w { color: #6a9682; transform: translate3d(0, .1em, 0); }
+.motion .story__text .w.on { color: #234c3c; transform: none; }
 
 /* ---- bread of good: scroll-driven ---- */
 .motion .good { height: 220svh; }
