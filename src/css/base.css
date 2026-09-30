@@ -30,8 +30,8 @@ dialog:not([open]) { display: none; }
 .wrap--narrow { width: min(100% - 2 * var(--gutter), 900px); }
 .center { text-align: center; }
 .accent { font-family: var(--font-accent); font-weight: 500; }
-.h-xl { font-size: clamp(3rem, 2rem + 4.6vw, 6rem); line-height: 1; text-transform: uppercase; }
-.h-lg { font-size: clamp(2.4rem, 1.6rem + 3.4vw, 4.4rem); line-height: 1.02; text-transform: uppercase; }
+.h-xl { font-size: clamp(2.6rem, 11.5vw, 5.5rem); line-height: 1; text-transform: uppercase; }
+.h-lg { font-size: clamp(2.1rem, 9vw, 4rem); line-height: 1.02; text-transform: uppercase; }
 .lead { font-size: clamp(1.05rem, 1rem + .5vw, 1.35rem); }
 .strong { font-weight: 600; }
 

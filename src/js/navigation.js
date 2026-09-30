@@ -33,10 +33,4 @@ export function initNavigation() {
     });
   }, { rootMargin: '-45% 0px -50% 0px' });
   byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
-
-  // Demo-only links do not navigate anywhere.
-  document.addEventListener('click', (e) => {
-    const a = e.target.closest('a[data-demo]');
-    if (a) e.preventDefault();
-  });
 }

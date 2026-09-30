@@ -1,13 +1,13 @@
 /* All motion is opt-in: `.motion` is set on <html> only when JS runs and reduced motion is NOT requested. */
 
 /* ---- generic reveal (fade + translate) ---- */
-.motion [data-reveal] { opacity: 0; transform: translate3d(0, 28px, 0); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: calc(var(--i, 0) * 90ms); }
+.motion [data-reveal] { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity .4s ease-out, transform .45s var(--ease); transition-delay: calc(var(--i, 0) * 50ms); }
 .motion [data-reveal].is-in { opacity: 1; transform: none; }
 
 /* ---- line reveal for headings ---- */
 .line { display: block; }
 .motion .line { overflow: hidden; padding-bottom: .14em; margin-bottom: -.14em; }
-.motion .line > span { display: block; transform: translate3d(0, 108%, 0); transition: transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 110ms + var(--d, 0ms)); }
+.motion .line > span { display: block; transform: translate3d(0, 108%, 0); transition: transform .55s var(--ease); transition-delay: calc(var(--i, 0) * 70ms + var(--d, 0ms)); }
 .motion .is-in .line > span, .motion .line.is-in > span, .motion [data-lines].is-in .line > span { transform: none; }
 
 /* ---- hero entrance (load) ---- */
@@ -33,7 +33,7 @@
 .motion .story__text .w.on { color: #234c3c; transform: none; }
 
 /* ---- bread of good: scroll-driven ---- */
-.motion .good { height: 220svh; }
+.motion .good { height: 180svh; }
 .motion .good__sticky { position: sticky; top: 0; height: 100svh; min-height: 0; }
 .motion .good__w { opacity: var(--g, 0); transform: translate3d(0, calc((1 - var(--g, 0)) * 60px), 0); }
 .motion .good__w[data-w="2"] { opacity: var(--g2, 0); transform: translate3d(0, calc((1 - var(--g2, 0)) * 60px), 0); }

@@ -2,6 +2,7 @@ const CONTENT = {
   good: { title: 'Хліб добра', text: 'Допоможіть подарувати хліб тому, хто його потребує.', action: 'Подарувати' },
   once: { title: 'Разова допомога', text: 'Кожна допомога — це нові можливості для людей.', action: 'Підтримати разово' },
   sub: { title: 'Підписка', text: 'Регулярна підтримка допомагає планувати розвиток і створювати більше робочих місць.', action: 'Оформити підписку' },
+  demo: { title: 'Незабаром', text: 'Ця сторінка ще не готова в демонстраційній версії. У робочому сайті тут буде окрема сторінка або посилання.', action: 'Зрозуміло' },
   cart: { title: 'Кошик', text: 'У демонстраційній версії кошик і оформлення замовлення недоступні.', action: 'Зрозуміло' },
 };
 
@@ -15,11 +16,14 @@ export function initModal() {
   const action = dialog.querySelector('[data-modal-action]');
 
   document.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-open-modal]');
+    const demo = e.target.closest('a[data-demo]');
+    if (demo) e.preventDefault(); // placeholder links open the shared demo dialog
+    const btn = demo || e.target.closest('[data-open-modal]');
     if (!btn) return;
-    const c = CONTENT[btn.dataset.openModal] || CONTENT.good;
+    const key = demo ? 'demo' : btn.dataset.openModal;
+    const c = CONTENT[key] || CONTENT.good;
     title.textContent = c.title;
-    text.textContent = btn.dataset.openModal === 'cart' && cartCount
+    text.textContent = key === 'cart' && cartCount
       ? `${c.text} Додано позицій: ${cartCount}.` : c.text;
     action.textContent = c.action;
     dialog.showModal();

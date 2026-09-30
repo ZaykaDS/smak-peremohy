@@ -34,7 +34,7 @@ function reveals() {
   // stagger siblings that reveal together
   document.querySelectorAll('[data-reveal]').forEach((el) => {
     const sibs = [...el.parentElement.children].filter((c) => c.hasAttribute('data-reveal'));
-    el.style.setProperty('--i', Math.min(sibs.indexOf(el), 4));
+    el.style.setProperty('--i', Math.min(sibs.indexOf(el), 3));
   });
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
@@ -42,7 +42,7 @@ function reveals() {
       en.target.classList.add('is-in');
       io.unobserve(en.target);
     });
-  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.05 });
+  }, { rootMargin: '0px 0px 6% 0px', threshold: 0 });
   targets.forEach((t) => io.observe(t));
 }
 
