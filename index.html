@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Смак Перемоги — соціальна пекарня, що змінює життя</title>
+  <meta name="description" content="Смак Перемоги (Taste of Victory) — соціальна пекарня: якісна ремісничу випічка та робочі місця для людей, які потребують підтримки. Демонстраційна версія сайту.">
+  <meta name="theme-color" content="#366b57">
+  <!-- canonical: set to the final absolute URL at launch -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Смак Перемоги — соціальна пекарня">
+  <meta property="og:description" content="Кожен придбаний хліб допомагає комусь отримати роботу, навчання та новий старт.">
+  <meta property="og:locale" content="uk_UA">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="./src/assets/img/hero-bag-492.webp" type="image/webp">
+  <script>document.documentElement.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion');</script>
+  <script type="module" src="./src/js/main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">До змісту</a>
+
+<header class="site-header" data-header>
+  <div class="site-header__bar">
+    <a class="logo" href="#top" aria-label="Taste of Victory — на початок">Taste of<br>Victory</a>
+    <nav class="nav" id="nav" aria-label="Головна навігація">
+      <a href="#shop">Магазин</a>
+      <a href="#about">Про нас</a>
+      <a href="#team">Команда</a>
+      <a href="#support">Підтримка</a>
+      <a href="#news">Новини</a>
+      <a href="#contacts">Контакти</a>
+      <a class="btn btn--orange nav__cta" href="#support">Підтримка</a>
+    </nav>
+    <div class="site-header__tools">
+      <button class="cart" type="button" data-open-modal="cart" aria-label="Кошик, товарів: 0">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h3l2.4 12.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L20 7H6"/><circle cx="9.5" cy="20" r="1.2"/><circle cx="17" cy="20" r="1.2"/></svg>
+        <span class="cart__count" data-cart-count hidden>0</span>
+      </button>
+      <a class="btn btn--orange header-cta" href="#support">Підтримка</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="nav" data-burger>
+        <span class="sr-only">Меню</span><i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top" data-hero aria-labelledby="hero-title">
+    <div class="hero__sticky">
+      <div class="hero__bg" data-depth="3"></div>
+      <div class="hero__stage" data-depth="6">
+        <svg class="hero__blob hero__blob--d" viewBox="0 0 1000 720" aria-hidden="true" focusable="false"><path d="{{BLOB_HERO}}"/></svg>
+        <svg class="hero__blob hero__blob--m" viewBox="0 0 700 860" aria-hidden="true" focusable="false"><path d="{{BLOB_FRAME}}"/></svg>
+        <div class="hero__content">
+          <picture class="hero__bag">
+            <source type="image/avif" srcset="./src/assets/img/hero-bag-492.avif">
+            <img src="./src/assets/img/hero-bag-492.webp" width="492" height="654" alt="Паперовий пакет з хлібом Taste of Victory" fetchpriority="high">
+          </picture>
+          <h1 class="hero__title accent" id="hero-title">
+            <span class="line"><span>соціальна пекарня,</span></span>
+            <span class="line"><span>що змінює життя</span></span>
+          </h1>
+          <p class="hero__actions">
+            <a class="btn btn--orange" href="#shop">Магазин</a>
+            <a class="btn btn--ghost" href="#support">Підтримка</a>
+          </p>
+        </div>
+      </div>
+      <img class="hero__decor hero__decor--l" data-depth="10" src="./src/assets/img/doodle-baguette-cream-235.webp" width="235" height="140" alt="" aria-hidden="true">
+      <img class="hero__decor hero__decor--r" data-depth="12" src="./src/assets/img/doodle-roll-cream-180.webp" width="180" height="180" alt="" aria-hidden="true">
+    </div>
+  </section>
+
+  <div class="stripes stripes--cream" aria-hidden="true"></div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap about__grid">
+      <div class="about__text">
+        <h2 class="accent h-xl" id="about-title" data-lines>
+          <span class="line"><span>Хто ми</span></span>
+        </h2>
+        <p class="lead" data-reveal>Соціальна пекарня — це бізнес, який поєднує виробництво випічки з соціальною місією.</p>
+        <p data-reveal>Ми працюємо за принципами соціального підприємництва: створюємо якісний продукт і водночас відкриваємо можливості для людей, які мають обмежений доступ до працевлаштування.</p>
+        <p class="strong" data-reveal>Ми не просто випікаємо хліб — ми допомагаємо людям повернути економічну незалежність через працю.</p>
+      </div>
+      <figure class="about__photo" data-mask>
+        <svg class="about__frame" viewBox="0 0 700 860" aria-hidden="true" focusable="false" preserveAspectRatio="none"><path d="{{BLOB_FRAME}}"/></svg>
+        <picture class="about__img">
+          <source type="image/avif" srcset="./src/assets/img/baker-307.avif">
+          <img src="./src/assets/img/baker-307.webp" width="307" height="398" alt="Пекарка Taste of Victory замішує тісто" loading="lazy">
+        </picture>
+      </figure>
+    </div>
+  </section>
+
+  <!-- TEAM STRIP -->
+  <section class="team" id="team" aria-label="Наша команда">
+    <div class="team__track" data-drift>
+      <picture><source type="image/avif" srcset="./src/assets/img/team-strip-956.avif"><img src="./src/assets/img/team-strip-956.webp" width="956" height="215" alt="Команда соціальної пекарні за роботою: пекарі з хлібом і круасанами" loading="lazy"></picture>
+    </div>
+  </section>
+  <div class="stripes stripes--green" aria-hidden="true"></div>
+
+  <!-- DIFFERENCE -->
+  <section class="diff" aria-labelledby="diff-title">
+    <div class="wrap">
+      <h2 class="accent h-lg center" id="diff-title" data-lines>
+        <span class="line"><span>Чим ми відрізняємось</span></span>
+        <span class="line"><span>від звичайної пекарні</span></span>
+      </h2>
+      <ol class="diff__list">
+        <li class="card" data-reveal>
+          <picture><source type="image/avif" srcset="./src/assets/img/why-team-324.avif"><img src="./src/assets/img/why-team-324.webp" width="324" height="174" alt="" loading="lazy"></picture>
+          <div><h3>Ми створюємо робочі можливості</h3><p>Наша пекарня надає роботу та професійне навчання людям, які мають обмежений доступ до працевлаштування або переживають складні життєві обставини. Ми допомагаємо отримати практичні навички, досвід роботи та впевненість у власних силах.</p></div>
+        </li>
+        <li class="card" data-reveal>
+          <picture><source type="image/avif" srcset="./src/assets/img/why-bread-324.avif"><img src="./src/assets/img/why-bread-324.webp" width="324" height="172" alt="" loading="lazy"></picture>
+          <div><h3>Ми інвестуємо прибуток у соціальну місію</h3><p>Частина або весь прибуток пекарні спрямовується на розвиток соціальних програм: навчання, підтримку працівників, створення нових робочих місць та розширення можливостей проєкту.</p></div>
+        </li>
+        <li class="card" data-reveal>
+          <picture><source type="image/avif" srcset="./src/assets/img/why-flour-324.avif"><img src="./src/assets/img/why-flour-324.webp" width="324" height="165" alt="" loading="lazy"></picture>
+          <div><h3>Ми працюємо для спільноти</h3><p>Наша діяльність спрямована не лише на продаж продукції, а й на розвиток локальної громади, взаємопідтримку та формування культури відповідального споживання.</p></div>
+        </li>
+        <li class="card" data-reveal>
+          <picture><source type="image/avif" srcset="./src/assets/img/why-dough-324.avif"><img src="./src/assets/img/why-dough-324.webp" width="324" height="164" alt="" loading="lazy"></picture>
+          <div><h3>Кожна покупка має значення</h3><p>Обираючи нашу продукцію, клієнти стають частиною соціальних змін. Кожен виріб — це працевлаштування, навчання та підтримка людей.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SHOP / BESTSELLERS -->
+  <section class="showcase" id="shop" data-showcase aria-labelledby="shop-title">
+    <div class="showcase__sticky">
+      <div class="showcase__head">
+        <h2 class="accent h-xl" id="shop-title" data-lines><span class="line"><span>Наші бестселери</span></span></h2>
+        <p>Обираючи нашу продукцію, ви стаєте частиною соціальних змін</p>
+      </div>
+      <ul class="showcase__track" data-track>
+        <li class="product">
+          <a class="product__media" href="#shop" aria-label="Шоколадне печиво — детальніше"><picture><source type="image/avif" srcset="./src/assets/img/p-cookie-135.avif"><img src="./src/assets/img/p-cookie-135.webp" width="135" height="148" alt="Шоколадне печиво" loading="lazy"></picture></a>
+          <h3 class="product__name">Шоколадне печиво</h3>
+          <p class="product__desc">Запашне печиво з насиченим смаком</p>
+          <p class="product__price">25 грн/шт</p>
+          <div class="product__row"><button class="btn btn--orange" type="button" data-add>Додати до кошика</button><a class="more" href="#shop">Детальніше <span aria-hidden="true">→</span></a></div>
+        </li>
+        <li class="product">
+          <a class="product__media" href="#shop" aria-label="Пончики — детальніше"><picture><source type="image/avif" srcset="./src/assets/img/p-donuts-133.avif"><img src="./src/assets/img/p-donuts-133.webp" width="133" height="148" alt="Пончики, присипані цукровою пудрою" loading="lazy"></picture></a>
+          <h3 class="product__name">Пончики</h3>
+          <p class="product__desc">Щедро присипані цукровою пудрою</p>
+          <p class="product__price">25 грн/шт</p>
+          <div class="product__row"><button class="btn btn--orange" type="button" data-add>Додати до кошика</button><a class="more" href="#shop">Детальніше <span aria-hidden="true">→</span></a></div>
+        </li>
+        <li class="product">
+          <a class="product__media" href="#shop" aria-label="Ремісничий хліб — детальніше"><picture><source type="image/avif" srcset="./src/assets/img/p-craft-bread-133.avif"><img src="./src/assets/img/p-craft-bread-133.webp" width="133" height="148" alt="Ремісничий хліб" loading="lazy"></picture></a>
+          <h3 class="product__name">Ремісничий хліб</h3>
+          <p class="product__desc">Класичний хліб за традиційним рецептом</p>
+          <p class="product__price">80 грн/шт</p>
+          <div class="product__row"><button class="btn btn--orange" type="button" data-add>Додати до кошика</button><a class="more" href="#shop">Детальніше <span aria-hidden="true">→</span></a></div>
+        </li>
+        <li class="product">
+          <a class="product__media" href="#shop" aria-label="Житній хліб — детальніше"><picture><source type="image/avif" srcset="./src/assets/img/p-rye-bread-133.avif"><img src="./src/assets/img/p-rye-bread-133.webp" width="133" height="148" alt="Житній хліб" loading="lazy"></picture></a>
+          <h3 class="product__name">Житній хліб</h3>
+          <p class="product__desc">Ідеальний до сніданку або теплої домашньої вечері</p>
+          <p class="product__price">75 грн/шт</p>
+          <div class="product__row"><button class="btn btn--orange" type="button" data-add>Додати до кошика</button><a class="more" href="#shop">Детальніше <span aria-hidden="true">→</span></a></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- STORY PAUSE -->
+  <section class="story" aria-label="Наша ідея">
+    <p class="story__text accent" data-words>Кожна покупка — це більше, ніж хліб. Це робота, навчання і новий старт.</p>
+  </section>
+
+  <!-- BREAD OF GOOD -->
+  <section class="good" id="good" data-good aria-labelledby="good-title">
+    <div class="good__sticky">
+      <picture class="good__photo" data-good-photo>
+        <source type="image/avif" srcset="./src/assets/img/bread-hero-640.avif 640w, ./src/assets/img/bread-hero-1200.avif 1200w, ./src/assets/img/bread-hero-1800.avif 1800w" sizes="100vw">
+        <source type="image/webp" srcset="./src/assets/img/bread-hero-640.webp 640w, ./src/assets/img/bread-hero-1200.webp 1200w, ./src/assets/img/bread-hero-1800.webp 1800w" sizes="100vw">
+        <img src="./src/assets/img/bread-hero-1200.webp" width="1200" height="1800" alt="Два хлібини на лляній тканині" loading="lazy">
+      </picture>
+      <div class="good__shade" aria-hidden="true"></div>
+      <div class="good__content">
+        <h2 class="good__title accent" id="good-title"><span class="good__w" data-w="1">Хліб</span> <span class="good__w" data-w="2">добра</span></h2>
+        <p class="good__lead">Подаруйте хліб або каву тому, хто цього потребує :)</p>
+        <button class="btn btn--orange btn--lg" type="button" data-open-modal="good">Подарувати хліб</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section class="support" id="support" aria-labelledby="support-title">
+    <div class="wrap">
+      <img class="support__doodle" src="./src/assets/img/doodle-roll-green-180.webp" width="180" height="180" alt="" aria-hidden="true" loading="lazy">
+      <h2 class="accent h-xl center" id="support-title" data-lines><span class="line"><span>Підтримка</span></span></h2>
+      <p class="center lead" data-reveal>Ваша підтримка допомагає створювати робочі місця та давати людям новий старт.</p>
+      <p class="center strong" data-reveal>Оберіть зручний спосіб допомоги.</p>
+      <div class="support__grid">
+        <article class="sup sup--beige" data-reveal>
+          <h3>Разова допомога</h3>
+          <p>Кожна допомога — це нові можливості для людей.</p>
+          <button class="btn btn--orange" type="button" data-open-modal="once">Підтримати разово</button>
+        </article>
+        <article class="sup sup--green" data-reveal>
+          <h3>Підписка</h3>
+          <p>Регулярна підтримка допомагає планувати розвиток і створювати більше робочих місць.</p>
+          <button class="btn btn--white" type="button" data-open-modal="sub">Оформити підписку</button>
+        </article>
+        <article class="sup sup--beige" data-reveal>
+          <h3>Хліб добра</h3>
+          <p>Подаруйте хліб або каву тому, хто цього потребує :)</p>
+          <button class="btn btn--orange" type="button" data-open-modal="good">Подарувати хліб</button>
+        </article>
+      </div>
+      <div class="support__together" data-reveal>
+        <img src="./src/assets/img/doodle-croissant-green-195.webp" width="195" height="210" alt="" aria-hidden="true" loading="lazy">
+        <p>Разом ми створюємо більше можливостей!</p>
+      </div>
+    </div>
+  </section>
+  <div class="stripes stripes--green stripes--flat" aria-hidden="true"></div>
+
+  <!-- REPORTS -->
+  <section class="news" id="news" aria-labelledby="news-title">
+    <div class="wrap wrap--narrow">
+      <h2 class="accent h-xl center" id="news-title" data-lines><span class="line"><span>Звіти</span></span></h2>
+      <ul class="reports">
+        <li data-reveal><a href="#news" data-demo><svg width="34" height="40" viewBox="0 0 34 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h17l9 9v24a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3z"/><path d="M22 2v9h9M9 20h16M9 26h16M9 32h10"/></svg><span>Звіт за січень 2026 року</span><b aria-hidden="true">→</b></a></li>
+        <li data-reveal><a href="#news" data-demo><svg width="34" height="40" viewBox="0 0 34 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h17l9 9v24a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3z"/><path d="M22 2v9h9M9 20h16M9 26h16M9 32h10"/></svg><span>Звіт за лютий 2026 року</span><b aria-hidden="true">→</b></a></li>
+        <li data-reveal><a href="#news" data-demo><svg width="34" height="40" viewBox="0 0 34 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h17l9 9v24a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3z"/><path d="M22 2v9h9M9 20h16M9 26h16M9 32h10"/></svg><span>Звіт за березень 2026 року</span><b aria-hidden="true">→</b></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners" aria-labelledby="partners-title">
+    <div class="wrap">
+      <h2 class="accent h-lg center" id="partners-title" data-lines><span class="line"><span>Наші партнери</span></span></h2>
+      <picture data-reveal><source type="image/avif" srcset="./src/assets/img/partners-1380.avif"><img src="./src/assets/img/partners-1380.webp" width="1380" height="190" alt="Партнери: Ukrainian Sisters, Ukrainer in Karlsruhe, SILAB Ukraine, Rotary Club Einbeck-Northeim, Solidarity, Єдність світу" loading="lazy"></picture>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="contacts" id="contacts" aria-labelledby="contacts-title">
+    <div class="wrap">
+      <h2 class="accent h-xl center" id="contacts-title" data-lines><span class="line"><span>Контакти</span></span></h2>
+      <p class="center lead" data-reveal>Ми завжди відкриті до співпраці, партнерств та нових ідей!</p>
+      <div class="contacts__grid">
+        <div class="contacts__info" data-reveal>
+          <h3>Контакти</h3>
+          <dl>
+            <dt>Телефон:</dt><dd><a href="tel:+380951017366">+38 095 101 73 66</a></dd>
+            <dt>Email:</dt><dd><a href="mailto:tasteofvictory2024@gmail.com">tasteofvictory2024@gmail.com</a></dd>
+          </dl>
+          <h3>Графік роботи</h3>
+          <p>Пн–Пт: 08:00–20:00<br>Сб–Нд: 09:00–18:00</p>
+          <h3>Соцмережі</h3>
+          <p class="social">
+            <a href="#contacts" data-demo aria-label="Instagram"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg></a>
+            <a href="#contacts" data-demo aria-label="Facebook"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5A.5.5 0 0 1 14 8z"/></svg></a>
+          </p>
+        </div>
+        <div class="contacts__map" data-reveal>
+          <h3>Локація</h3>
+          <figure class="mapframe">
+            <svg class="about__frame" viewBox="0 0 700 860" aria-hidden="true" focusable="false" preserveAspectRatio="none"><path d="{{BLOB_FRAME}}"/></svg>
+            <picture><source type="image/avif" srcset="./src/assets/img/map-559.avif"><img src="./src/assets/img/map-559.webp" width="559" height="382" alt="Схема розташування: м. Київ, провулок Червиновського 5а" loading="lazy"></picture>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-sec" id="form" aria-labelledby="form-title">
+    <div class="stripes stripes--cream" aria-hidden="true"></div>
+    <img class="cut cut--baguette" src="./src/assets/img/cut-baguette-211.webp" width="211" height="253" alt="" aria-hidden="true" loading="lazy" data-drift-y="-0.06">
+    <img class="cut cut--shop" src="./src/assets/img/cut-shop-211.webp" width="211" height="397" alt="" aria-hidden="true" loading="lazy" data-drift-y="0.05">
+    <img class="cut cut--baker" src="./src/assets/img/cut-baker-237.webp" width="237" height="329" alt="" aria-hidden="true" loading="lazy" data-drift-y="-0.05">
+    <img class="cut cut--loaf" src="./src/assets/img/cut-loaf-210.webp" width="210" height="215" alt="" aria-hidden="true" loading="lazy" data-drift-y="0.07">
+    <div class="wrap wrap--form">
+      <h2 class="accent h-lg center" id="form-title" data-lines><span class="line"><span>Зв'язатися з нами</span></span></h2>
+      <p class="center form-lead">Звертайтеся щодо замовлень, партнерства, волонтерства або підтримки соціальної пекарні — будемо раді співпраці.</p>
+      <form class="form" novalidate data-form>
+        <div class="form__row">
+          <label class="field"><span>Ім'я *</span><input name="name" type="text" autocomplete="given-name" required></label>
+          <label class="field"><span>Прізвище *</span><input name="surname" type="text" autocomplete="family-name" required></label>
+        </div>
+        <label class="field"><span>Email *</span><input name="email" type="email" autocomplete="email" required></label>
+        <label class="field"><span>Ваше звернення *</span><textarea name="message" rows="6" required></textarea></label>
+        <p class="form__error" role="alert" data-form-error hidden></p>
+        <button class="btn btn--orange btn--block" type="submit">Надіслати!</button>
+        <p class="form__ok" role="status" data-form-ok hidden><strong>Дякуємо!</strong> У демонстраційній версії форма не надсилається.</p>
+      </form>
+    </div>
+    <div class="stripes stripes--cream stripes--bottom" aria-hidden="true"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div><h3>Taste of Victory</h3><ul><li><a href="#about">Про нас</a></li><li><a href="#shop">Магазин</a></li><li><a href="#team">Команда</a></li><li><a href="#support">Підтримка</a></li><li><a href="#contacts">Контакти</a></li><li><a href="#news">Новини</a></li></ul></div>
+    <div><h3>Адреса</h3><p>м. Київ, провулок Червиновського 5а</p></div>
+    <div><h3>Контакти</h3><p><a href="tel:+380951017366">+38 095 101 73 66</a><br><a href="mailto:tasteofvictory2024@gmail.com">tasteofvictory2024@gmail.com</a></p></div>
+    <div><h3>Графік роботи</h3><p>Пн–Пт: 08:00–20:00<br>Сб–Нд: 09:00–18:00</p></div>
+    <div><h3>Соцмережі</h3><p class="social"><a href="#contacts" data-demo aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg></a><a href="#contacts" data-demo aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5A.5.5 0 0 1 14 8z"/></svg></a></p></div>
+  </div>
+  <p class="footer__legal wrap">© Taste of Victory · Демонстраційна версія</p>
+  <div class="footer__word accent" aria-hidden="true">СМАК ПЕРЕМОГИ</div>
+</footer>
+
+<dialog class="modal" id="modal" aria-labelledby="modal-title" data-modal>
+  <form method="dialog" class="modal__box">
+    <button class="modal__close" value="close" aria-label="Закрити">×</button>
+    <h2 class="accent" id="modal-title" data-modal-title>Хліб добра</h2>
+    <p data-modal-text>Допоможіть подарувати хліб тому, хто його потребує.</p>
+    <button class="btn btn--orange btn--lg" value="ok" data-modal-action>Подарувати</button>
+    <p class="modal__demo">Демонстраційна версія</p>
+  </form>
+</dialog>
+</body>
+</html>

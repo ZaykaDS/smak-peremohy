@@ -1,0 +1,40 @@
+@import "@fontsource/montserrat/cyrillic-400.css";
+@import "@fontsource/montserrat/cyrillic-ext-400.css";
+@import "@fontsource/montserrat/latin-400.css";
+@import "@fontsource/montserrat/cyrillic-600.css";
+@import "@fontsource/montserrat/latin-600.css";
+@import "@fontsource/caveat/cyrillic-500.css";
+@import "@fontsource/caveat/cyrillic-ext-500.css";
+@import "@fontsource/caveat/latin-500.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) - 10px); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--cream); color: var(--ink);
+  font: 400 clamp(1rem, 0.95rem + 0.25vw, 1.125rem)/1.6 var(--font-primary);
+  overflow-x: clip;
+}
+img, picture, svg { display: block; max-width: 100%; }
+img { height: auto; }
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+a { color: inherit; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 6px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: fixed; left: 1rem; top: -4rem; z-index: 100; background: var(--orange); padding: .6rem 1rem; border-radius: var(--radius-pill); transition: top .2s; }
+.skip:focus { top: 1rem; }
+dialog:not([open]) { display: none; }
+
+.wrap { width: min(100% - 2 * var(--gutter), 1200px); margin-inline: auto; }
+.wrap--narrow { width: min(100% - 2 * var(--gutter), 900px); }
+.center { text-align: center; }
+.accent { font-family: var(--font-accent); font-weight: 500; }
+.h-xl { font-size: clamp(3rem, 2rem + 4.6vw, 6rem); line-height: 1; text-transform: uppercase; }
+.h-lg { font-size: clamp(2.4rem, 1.6rem + 3.4vw, 4.4rem); line-height: 1.02; text-transform: uppercase; }
+.lead { font-size: clamp(1.05rem, 1rem + .5vw, 1.35rem); }
+.strong { font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

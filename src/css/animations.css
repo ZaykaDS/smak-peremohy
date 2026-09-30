@@ -1,0 +1,46 @@
+/* All motion is opt-in: `.motion` is set on <html> only when JS runs and reduced motion is NOT requested. */
+
+/* ---- generic reveal (fade + translate) ---- */
+.motion [data-reveal] { opacity: 0; transform: translate3d(0, 28px, 0); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: calc(var(--i, 0) * 90ms); }
+.motion [data-reveal].is-in { opacity: 1; transform: none; }
+
+/* ---- line reveal for headings ---- */
+.line { display: block; }
+.motion .line { overflow: hidden; padding-bottom: .14em; margin-bottom: -.14em; }
+.motion .line > span { display: block; transform: translate3d(0, 108%, 0); transition: transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 110ms + var(--d, 0ms)); }
+.motion .is-in .line > span, .motion .line.is-in > span, .motion [data-lines].is-in .line > span { transform: none; }
+
+/* ---- hero entrance (load) ---- */
+.motion .hero .hero__stage { opacity: 0; transform: scale(1.03); transition: opacity .9s var(--ease), transform 1.2s var(--ease); }
+.motion .hero .hero__bag { opacity: 0; transform: translate3d(0, 24px, 0) scale(.96); transition: opacity .8s var(--ease) .25s, transform .9s var(--ease) .25s; }
+.motion .hero .hero__actions { opacity: 0; transform: translate3d(0, 24px, 0); transition: opacity .7s var(--ease) .75s, transform .7s var(--ease) .75s; }
+.motion .hero .hero__decor { opacity: 0; transition: opacity .8s var(--ease) 1s, translate .9s var(--ease) 1s; translate: 0 30px; }
+.motion .hero .hero__title .line > span { transition-delay: calc(.45s + var(--i, 0) * .14s); }
+.motion.hero-in .hero .hero__stage { opacity: 1; transform: scale(var(--hs, 1)) translate3d(0, var(--hy, 0px), 0); }
+.motion.hero-in .hero .hero__bag, .motion.hero-in .hero .hero__actions { opacity: 1; transform: none; }
+.motion.hero-in .hero .hero__decor { opacity: .9; translate: 0 0; }
+.motion.hero-in .hero .hero__title .line > span { transform: none; }
+/* after intro, scroll/pointer drive the stage without transition lag */
+.motion.hero-done .hero .hero__stage { transition: none; }
+.hero__stage, .hero__bg, .hero__decor { transform: translate3d(var(--px, 0px), var(--py, 0px), 0); }
+.motion.hero-in .hero .hero__stage { transform: translate3d(var(--px, 0px), calc(var(--py, 0px) + var(--hy, 0px)), 0) scale(var(--hs, 1)); }
+.hero__sticky { opacity: var(--ho, 1); }
+
+/* ---- team strip / drift ---- */
+.team__track, .cut { transition: none; }
+
+/* ---- story words ---- */
+.motion .story__text .w { opacity: .16; transform: translate3d(0, .12em, 0); }
+.motion .story__text .w.on { opacity: 1; transform: none; }
+
+/* ---- bread of good: scroll-driven ---- */
+.motion .good { height: 220svh; }
+.motion .good__sticky { position: sticky; top: 0; height: 100svh; min-height: 0; }
+.motion .good__w { opacity: var(--g, 0); transform: translate3d(0, calc((1 - var(--g, 0)) * 60px), 0); }
+.motion .good__w[data-w="2"] { opacity: var(--g2, 0); transform: translate3d(0, calc((1 - var(--g2, 0)) * 60px), 0); }
+.motion .good__lead, .motion .good__content .btn { opacity: var(--g3, 0); transform: translate3d(0, calc((1 - var(--g3, 0)) * 24px), 0); }
+.motion .good__content .btn:hover { transform: translateY(-2px); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
